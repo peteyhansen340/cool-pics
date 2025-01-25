@@ -1,0 +1,149 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+/* CSS Variables for consistency */
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+a:link, a:visited {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer {
+  font-size: 0.9em;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+figure img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Menu Button */
+.menu-btn {
+  display: block;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--secondary-font);
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* Navigation Links */
+nav ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+}
+
+nav ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+/* Add box shadow for shading */
+.gallery img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Creates a soft shadow */
+    border: 5px solid #fff; /* Adds a white border for contrast */
+    border-radius: 10px; /* Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+  
+  /* Add hover effect */
+  .gallery img:hover {
+    transform: scale(1.05); /* Grows slightly when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increases shadow intensity */
+  }
+  
+  /* Add filter effects (optional) */
+  .gallery img:hover {
+    filter: brightness(1.1) contrast(1.2); /* Brightens and increases contrast on hover */
+  }
+  
+  /* Add more dramatic effects for fun (optional) */
+  .gallery img:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5)) grayscale(50%); /* Adds a drop shadow and partial grayscale */
+  }
+  
