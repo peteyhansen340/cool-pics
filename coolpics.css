@@ -112,7 +112,7 @@ nav ul.menu {
 }
 
 nav ul.menu.show {
-  display: flex;
+  display: block;
 }
 
 nav ul li {
