@@ -177,7 +177,7 @@ nav ul li a {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width <= 1000px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
