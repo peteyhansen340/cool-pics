@@ -103,7 +103,7 @@ nav ul {
 }
 
 nav ul.menu {
-  display: none;
+  display: none; /* Hide the menu by default */
   flex-direction: column;
   background-color: var(--primary-color);
   padding: 1rem;
@@ -112,7 +112,7 @@ nav ul.menu {
 }
 
 nav ul.menu.show {
-  display: block;
+  display: block; /* Show the menu when the class "show" is added */
 }
 
 nav ul li {
@@ -182,17 +182,20 @@ nav ul li a {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Hide the menu button on large screens */
   .menu-btn {
     display: none;
   }
 
-  nav ul {
+  /* Show the menu as a row on large screens */
+  nav ul.menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
   }
 }
+
 .modal {
   transition: opacity 0.3s ease;
   display: none;

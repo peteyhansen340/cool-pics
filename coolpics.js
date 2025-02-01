@@ -1,13 +1,11 @@
-// JavaScript to handle the responsive menu button and image modal viewer
-
 document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".menu-btn");
     const navMenu = document.querySelector("nav ul.menu");
-
+  
     if (!menuBtn || !navMenu) {
-        console.error("Menu button or navigation menu not found.");
-        return;
-      }
+      console.error("Menu button or navigation menu not found.");
+      return;
+    }
   
     // Toggle navigation menu visibility
     menuBtn.addEventListener("click", () => {
@@ -21,21 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   
-    // Modal image viewer
-    const modal = document.createElement("div");
-    modal.id = "imageModal";
-    modal.classList.add("modal");
-    modal.innerHTML = `
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>`;
-    document.body.appendChild(modal);
-  
-    const modalImage = document.getElementById("modalImage");
-    const captionText = document.getElementById("caption");
-    
-    // Move the selection of the close button inside the DOMContentLoaded callback
-    const closeBtn = modal.querySelector(".close");
+    // Image modal viewer
+    const modal = document.getElementById("image-viewer"); // Using the existing modal from HTML
+    const modalImage = modal.querySelector("img");
+    const captionText = modal.querySelector(".image-caption");
+    const closeBtn = modal.querySelector(".close-viewer");
   
     // Event handler for clicking gallery images
     document.querySelectorAll(".gallery img").forEach((img) => {
@@ -59,13 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // Viewer Template Function
+  // Viewer Template Function (kept for future dynamic use)
   function viewerTemplate(imageUrl, altText) {
     return `
-        <div class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" src="${imageUrl}" alt="${altText}">
-            <div>${altText}</div>
-        </div>`;
+      <div class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" src="${imageUrl}" alt="${altText}">
+          <div>${altText}</div>
+      </div>`;
   }
   
