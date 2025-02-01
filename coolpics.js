@@ -3,6 +3,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".menu-btn");
     const navMenu = document.querySelector("nav ul.menu");
+
+    if (!menuBtn || !navMenu) {
+        console.error("Menu button or navigation menu not found.");
+        return;
+      }
   
     // Toggle navigation menu visibility
     menuBtn.addEventListener("click", () => {
