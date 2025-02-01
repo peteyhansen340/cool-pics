@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
           navMenu.classList.remove("show");
           navMenu.style.display = "flex";
       } else {
-          navMenu.style.display = "";
+          navMenu.style.display.remove("show");
+          navMenu.style.display = "none";
       }
   });
 
@@ -64,4 +65,4 @@ function viewerTemplate(imageUrl, altText) {
           <img class="modal-content" src="${imageUrl}" alt="${altText}">
           <div>${altText}</div>
       </div>`;
-}
+}     
