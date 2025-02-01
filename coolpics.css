@@ -103,7 +103,7 @@ nav ul {
 }
 
 nav ul.menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: var(--primary-color);
   padding: 1rem;
@@ -112,7 +112,7 @@ nav ul.menu {
 }
 
 nav ul.menu.show {
-  display: block;
+  display: flex;
 }
 
 nav ul li {
