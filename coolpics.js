@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.remove("show"); // Hide the menu on smaller screens
       }
     });
+    if (window.innerWidth >= 1000) {
+        navMenu.classList.add("show");
+      } else {
+        navMenu.classList.remove("show");
+      }
+    });
   
     // Image modal viewer
     const modal = document.getElementById("image-viewer");
