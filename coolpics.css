@@ -103,7 +103,7 @@ nav ul {
 }
 
 nav ul.menu {
-  /* Hide the menu by default */
+  display: none;/* Hide the menu by default */
   flex-direction: column;
   background-color: var(--primary-color);
   padding: 1rem;
@@ -112,7 +112,7 @@ nav ul.menu {
 }
 
 nav ul.menu.show {
-  display: block; /* Show the menu when the class "show" is added */
+  display: flex; /* Show the menu when the class "show" is added */
 }
 
 nav ul li {
