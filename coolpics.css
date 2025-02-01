@@ -125,7 +125,9 @@ nav ul li a {
 }
 
 /* Modal Viewer Styling */
-.viewer {
+.modal {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
@@ -137,19 +139,18 @@ nav ul li a {
   z-index: 10;
 }
 
-.viewer img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+.modal.show {
+  opacity: 1;
 }
 
-.viewer img:hover {
-  transform: scale(1.03);
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
 }
 
-.close-viewer {
+.close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -162,12 +163,8 @@ nav ul li a {
   z-index: 11;
 }
 
-.close-viewer:hover {
+.close-btn:hover {
   background-color: var(--primary-color);
-}
-
-.hide {
-  display: none !important;
 }
 
 /* Media Queries */
@@ -177,7 +174,7 @@ nav ul li a {
   }
 }
 
-@media (min-width <= 1000px) {
+@media (min-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -196,31 +193,7 @@ nav ul li a {
   }
 }
 
-.modal {
-  transition: opacity 0.3s ease;
-  display: none;
-  position: fixed;
-  z-index: 10;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
+/* Hidden class for elements */
+.hide {
+  display: none !important;
 }

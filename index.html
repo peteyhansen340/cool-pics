@@ -10,7 +10,7 @@
   <script src="coolpics.js" defer></script>
 </head>
 <div class="viewer hide">
-  <button class="close-viewer">X</button>
+  <button class="close-viewer" aria-label="Close Image Viewer">X</button>
   <img src="" alt="">
 </div>
 
@@ -100,9 +100,9 @@
     </section>
   </main>
 <!-- Image Viewer Modal -->
-<div id="image-viewer" class="hidden">
+<div id="image-viewer" class="Modal hidden">
   <div class="modal-content">
-    <span class="close-btn">&times;</span>
+    <span class="close-btn" aria-label="Close Viewer">&times;</span>
     <img src="" alt="">
     <p class="image-caption"></p>
   </div>
