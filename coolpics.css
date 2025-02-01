@@ -194,6 +194,7 @@ nav ul li a {
   }
 }
 .modal {
+  transition: opacity 0.3s ease;
   display: none;
   position: fixed;
   z-index: 10;
