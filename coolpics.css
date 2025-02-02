@@ -145,6 +145,7 @@ nav ul li a {
 
 .modal.show {
   opacity: 1;
+  display: flex;
 }
 
 .modal-content {
