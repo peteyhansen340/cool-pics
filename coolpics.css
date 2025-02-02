@@ -181,8 +181,11 @@ nav ul li a {
 }
 
 #image-viewer img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
   transition: transform 0.3s ease; /* Smooth transition for scaling */
   object-fit: contain;
 }
@@ -222,6 +225,10 @@ nav ul li a {
 @media (min-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #image-viewer img{
+    max-width: 60%;
+    max-height: 60%;
   }
 
   /* Hide the menu button on large screens */

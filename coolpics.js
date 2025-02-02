@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.add("show"); // Show modal
         modalImage.src = "https://wdd131.netlify.app/examples/cool-pics/norris-full.jpeg";   // Set modal image to the clicked image's source
         captionText.innerText = img.alt; // Set the caption to the alt text
-        modalImage.style.transform = "scale(3)";
+        
       });
     });
   
