@@ -227,8 +227,8 @@ nav ul li a {
     grid-template-columns: repeat(3, 1fr);
   }
   #image-viewer img{
-    max-width: 30%;
-    max-height: 30%;
+    max-width: 50%;
+    max-height: 50%;
   }
 
   /* Hide the menu button on large screens */
