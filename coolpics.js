@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = modal.querySelector(".close-btn");
   
     // Event handler for clicking gallery images
-    document.querySelectorAll(".gallery img").forEach((img) => {
+    document.querySelectorAll(".gallery picture img").forEach((img) => {
       img.addEventListener("click", () => {
         modal.classList.add("show"); // Show modal
         modalImage.src = img.src;   // Set modal image to the clicked image's source
