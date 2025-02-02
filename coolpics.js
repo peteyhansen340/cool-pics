@@ -20,12 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.remove("show"); // Hide the menu on smaller screens
       }
     });
+  
+    // Ensure the menu is correctly set based on the current screen width
     if (window.innerWidth >= 1000) {
-        navMenu.classList.add("show");
-      } else {
-        navMenu.classList.remove("show");
-      }
-    });
+      navMenu.classList.add("show");
+    } else {
+      navMenu.classList.remove("show");
+    }
   
     // Image modal viewer
     const modal = document.getElementById("image-viewer");
@@ -36,21 +37,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event handler for clicking gallery images
     document.querySelectorAll(".gallery img").forEach((img) => {
       img.addEventListener("click", () => {
-        modal.classList.add("show");
-        modalImage.src = img.src;
-        captionText.innerText = img.alt;
+        modal.classList.add("show"); // Show modal
+        modalImage.src = img.src;   // Set modal image to the clicked image's source
+        captionText.innerText = img.alt; // Set the caption to the alt text
       });
     });
   
-    // Close modal on click
+    // Close modal on click of close button
     closeBtn.addEventListener("click", () => {
-      modal.classList.remove("show");
+      modal.classList.remove("show"); // Hide the modal
     });
   
     // Close modal when clicking outside the image
     window.addEventListener("click", (e) => {
       if (e.target === modal) {
-        modal.classList.remove("show");
+        modal.classList.remove("show"); // Hide the modal if clicked outside
       }
     });
   });
