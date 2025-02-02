@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".gallery picture img").forEach((img) => {
       img.addEventListener("click", () => {
         modal.classList.add("show"); // Show modal
-        modalImage.src = img.src;   // Set modal image to the clicked image's source
+        modalImage.src = "https://wdd131.netlify.app/examples/cool-pics/norris-full.jpeg";   // Set modal image to the clicked image's source
         captionText.innerText = img.alt; // Set the caption to the alt text
         modalImage.style.transform = "scale(3)";
       });
